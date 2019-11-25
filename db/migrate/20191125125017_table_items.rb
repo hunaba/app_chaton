@@ -13,4 +13,4 @@ end
 #Pour le moment, l'image de l'item sera un string 
 #qui redirigera vers une url directe d'une image. 
 #Pour l'appeler, tu pourras faire : 
- #   <img src="<%= @item.image_url %>"> #
+ #  DANS LA VIEW <img src="<%= @item.image_url %>"> #
