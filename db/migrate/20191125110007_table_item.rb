@@ -1,10 +1,12 @@
 class TableItem < ActiveRecord::Migration[5.2]
   def change
-  	create_table :item
+  	create_table :item do |t|
   	 t.string :title
   	 t.text :description
   	 t.decimal :price
   	 t.string :image_url
+
+  	end
   end
 end
 
