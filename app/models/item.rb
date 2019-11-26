@@ -3,5 +3,6 @@ class Item < ActiveRecord::Base
 	validates :price, presence:true
 	validates :image_url, presence:true 
 
-	has_and_belongs_to_many :cart
+	#has_and_belongs_to_many :cart
+	belongs_to :cart
 end
