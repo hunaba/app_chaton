@@ -4,4 +4,6 @@ class Item < ActiveRecord::Base
 	validates :image_url, presence:true 
 
 	has_many :carts
+	
+	#has_and_belongs_to_many :cart
 end
