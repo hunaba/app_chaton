@@ -1,0 +1,27 @@
+<div class="container-fluid d-flex justify-content-center">
+    <div class="col-8">
+      <div class="container-fluid">
+        <div class="row">
+            <div class="col-6 mr-2">
+                <img class="card-img-top zoom" src= <%= @item.image_url %> alt="Card image cap" width="500" height="430">
+            </div>
+            <div class="col-5">
+                <h1 class="text-center mb-5"><%= @item.title %></h1>
+                <p><%= @item.description %></p>
+                <p>Prix: <%= @item.price %>$</p>
+                <div class="form-group">
+                    <label for="exampleSelect1">Quantité</label>
+                    <select class="form-control" id="exampleSelect1">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                    </select>
+                </div>
+                <button type="button" class="btn btn-primary btn-lg btn-block">Ajouter au panier</button>
+            </div>
+        </div>
+      </div>
+    </div>
+</div>
