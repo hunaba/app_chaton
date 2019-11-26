@@ -5,5 +5,4 @@ class Item < ActiveRecord::Base
 
 	has_many :carts
 	
-	#has_and_belongs_to_many :cart
 end
