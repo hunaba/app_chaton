@@ -6,5 +6,7 @@ class User < ApplicationRecord
 
   has_one :cart #le user a un shoppingcart
 
+  #belongs_to :cart
+
 end
 

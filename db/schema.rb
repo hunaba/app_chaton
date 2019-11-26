@@ -10,17 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 2019_11_25_130326) do
-=======
-ActiveRecord::Schema.define(version: 2019_11_25_165336) do
->>>>>>> 3c947b754fed805f315833f73bbf2f877b7f84b0
+
+
+ActiveRecord::Schema.define(version: 2019_11_26_103430) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-<<<<<<< HEAD
-=======
+
   create_table "carts", force: :cascade do |t|
     t.bigint "user_id"
     t.bigint "item_id"
@@ -30,7 +27,7 @@ ActiveRecord::Schema.define(version: 2019_11_25_165336) do
     t.index ["user_id"], name: "index_carts_on_user_id"
   end
 
->>>>>>> 3c947b754fed805f315833f73bbf2f877b7f84b0
+  
   create_table "items", force: :cascade do |t|
     t.string "title"
     t.text "description"
@@ -38,6 +35,22 @@ ActiveRecord::Schema.define(version: 2019_11_25_165336) do
     t.string "image_url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "join_items_orders", force: :cascade do |t|
+    t.bigint "item_id"
+    t.bigint "order_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["item_id"], name: "index_join_items_orders_on_item_id"
+    t.index ["order_id"], name: "index_join_items_orders_on_order_id"
+  end
+
+  create_table "orders", force: :cascade do |t|
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_orders_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
