@@ -5,6 +5,7 @@ ruby '2.5.1'
 
 gem 'bootstrap'
 gem 'jquery-rails'
+gem 'jquery'
 gem 'faker'
 gem 'table_print'
 gem 'devise'
