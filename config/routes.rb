@@ -4,4 +4,8 @@ Rails.application.routes.draw do
  resources :items, only: [:show]
  resource :cart, only: [:show] #ou cartS ??
  root to:"items#index"  
+ resources :users do
+ 	resources :carts
+ 	get 'show', to: 'carts#show'
+ end
 end
