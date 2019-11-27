@@ -44,7 +44,7 @@ class OrdersController < ApplicationController
   def update_total
     self.total_price = calculate_total
   end
-end
+
 
   def destroy
   end
