@@ -1,6 +1,7 @@
 class OrdersController < ApplicationController
   before_action :set_order, only: [:show, :edit, :update, :destroy]
-
+  before_action :authenticate_user!  
+   
   # GET /orders
   # GET /orders.json
   def index
@@ -10,6 +11,8 @@ class OrdersController < ApplicationController
   # GET /orders/1
   # GET /orders/1.json
   def show
+    #item = current_user.cart.items.all #necessaire ?
+    #ça montre les items du panier du user 
   end
 
   # GET /orders/new
@@ -71,4 +74,5 @@ class OrdersController < ApplicationController
     def order_params
       params.fetch(:order, {})
     end
+
 end
