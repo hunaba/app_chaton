@@ -10,6 +10,8 @@ class CartsController < ApplicationController
   # GET /carts/1
   # GET /carts/1.json
   def show
+  	item = current_user.cart.items.all
+  	#ça montre les items du panier du user
   end
 
   # GET /carts/new
