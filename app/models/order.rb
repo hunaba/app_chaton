@@ -1,5 +1,4 @@
 class Order < ApplicationRecord
-
 	belongs_to :user
 	has_many :join_items_order
 	has_many :items, through: :join_items_order
@@ -22,5 +21,4 @@ class Order < ApplicationRecord
   def update_total
     self.total_price = calculate_total
   end
-end
 end
