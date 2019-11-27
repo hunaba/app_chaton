@@ -1,35 +1,35 @@
-<br>
-<br>
 <div class="container">
-<form>
-  <fieldset>
-    <legend>Se Connecter</legend>
-    <div class="form-group">
-      <label for="exampleInputEmail1">Adresse Email</label>
-      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="adresse email">
+  <div class="row">
+    <div class="col-md-6 offset-md-3">
+      <br><br><br>
+      <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+        <h1 class="h3 mb-3 font-weight-normal text-center">Se Connecter</h1>
+        <%= devise_error_messages! %>
+
+        <div class="form-group">
+          <%= f.label :email, "email" %><br />
+          <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control" %>
+        </div>
+
+        <div class="form-group">
+          <%= f.label :password, "mot de passe" %><br />
+          <%= f.password_field :password, autocomplete: "current-password", class: "form-control" %>
+        </div>
+        <% if devise_mapping.rememberable? %>
+        <div class="field">
+        <%= f.check_box :remember_me %>
+        <%= f.label :remember_me %>
+        </div>
+        <% end %>
+        <div class="actions mt-5">
+          <%= f.submit "Soumettre", class: "btn btn-lg btn-primary btn-block" %>
+        </div>
+      <% end %>
+      <br>
     </div>
-    <div class="form-group">
-      <label for="exampleInputPassword1">Mot de Passe</label>
-      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="mot de passe">
-    </div>
-    <fieldset class="form-group">
-      <div class="form-check">
-        <label class="form-check-label">
-          <input class="form-check-input" type="checkbox" value="" checked="">
-          Se souvenir de moi
-        </label>
-      </div>
-      <div class="form-check disabled">
-        <label class="form-check-label">
-          <input class="form-check-input" type="checkbox" value="" disabled="">
-          J'ai oublié mon mot de passe
-        </label>
-      </div>
-    </fieldset>
-    <button type="submit" class="btn btn-primary">Soumettre</button>
-  </fieldset>
-</form>
-</div>
-<MARQUEE direction="bottom" height="100">
+  </div>
+
+    <MARQUEE direction="bottom" height="100">
       <h3 style="color: #ff9292"><%= image_tag('nian.gif', draggable: "true", id: "cat") %><%= image_tag('nian.gif', draggable: "true", id: "cat") %> </h3>
-</MARQUEE>
+    </MARQUEE>
+</div>
