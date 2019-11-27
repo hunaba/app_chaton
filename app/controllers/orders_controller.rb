@@ -1,4 +1,5 @@
 class OrdersController < ApplicationController
+  
   def index
     @orders = current_user.orders
   end
@@ -27,6 +28,23 @@ class OrdersController < ApplicationController
       redirect_to root_path
     end
   end
+
+  def calculate_total
+    self.order_items.collect { |item| item.product.price * item.quantity }.sum
+  end
+
+  private
+
+  def update_status
+    if self.status == nil?
+      self.status = "In progress"
+    end
+  end
+
+  def update_total
+    self.total_price = calculate_total
+  end
+end
 
   def destroy
   end
