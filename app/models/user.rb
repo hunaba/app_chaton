@@ -5,8 +5,9 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_one :cart #le user a un shoppingcart
-
+  #has_many :orders ?
   #belongs_to :cart
+  #controller cart ou order ??
 
 end
 
