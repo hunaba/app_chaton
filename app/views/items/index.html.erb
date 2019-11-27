@@ -2,7 +2,8 @@
 <%= render 'items/cover' %>
 
 <div class="container">
-    <h4 class="text-center mt-3">Cartes des évènements</h4>
+
+    <h4 class="text-center mt-3">Cartes des chats</h4>
 
       <div class="container">        
         <div class="row">
@@ -11,11 +12,11 @@
                 <div class="col-lg-6 mt-4">
                     <div class="bs-component">
                     <div class="card text-center">
-                        <img class="card-img-top zoom" src= <%= one_item.image_url %> alt="Card image cap">
+                        <img class="card-img-top zoom" src= <%= one_item.image_url %> alt="Card image cap" width="400" height="230">
                         <div class="card-body">
                         <h5 class="card-title text-center"><%= one_item.title %></h5>
                         <p class="card-text text-center">Prix: <%= one_item.price %></p>
-                        <a href="#" class="btn btn-primary ">En savoir plus</a>
+                        <a class="btn btn-primary" <%= link_to "En savoir plus", item_path(one_item.id)%></a>
                         </div>
                     </div>
                     </div>
