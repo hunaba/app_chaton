@@ -6,6 +6,6 @@ Rails.application.routes.draw do
  root to:"items#index"  
  resources :users do
  	resources :carts
- 	get 'show', to: 'carts#show'
+   get 'show', to: 'carts#show'
  end
 end
