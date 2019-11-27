@@ -1,26 +1,35 @@
-<h2>Log in</h2>
-
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "current-password" %>
-  </div>
-
-  <% if devise_mapping.rememberable? %>
-    <div class="field">
-      <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
+<br>
+<br>
+<div class="container">
+<form>
+  <fieldset>
+    <legend>Se Connecter</legend>
+    <div class="form-group">
+      <label for="exampleInputEmail1">Adresse Email</label>
+      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="adresse email">
     </div>
-  <% end %>
-
-  <div class="actions">
-    <%= f.submit "Log in" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+    <div class="form-group">
+      <label for="exampleInputPassword1">Mot de Passe</label>
+      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="mot de passe">
+    </div>
+    <fieldset class="form-group">
+      <div class="form-check">
+        <label class="form-check-label">
+          <input class="form-check-input" type="checkbox" value="" checked="">
+          Se souvenir de moi
+        </label>
+      </div>
+      <div class="form-check disabled">
+        <label class="form-check-label">
+          <input class="form-check-input" type="checkbox" value="" disabled="">
+          J'ai oublié mon mot de passe
+        </label>
+      </div>
+    </fieldset>
+    <button type="submit" class="btn btn-primary">Soumettre</button>
+  </fieldset>
+</form>
+</div>
+<MARQUEE direction="bottom" height="100">
+      <h3 style="color: #ff9292"><%= image_tag('nian.gif', draggable: "true", id: "cat") %><%= image_tag('nian.gif', draggable: "true", id: "cat") %> </h3>
+</MARQUEE>
