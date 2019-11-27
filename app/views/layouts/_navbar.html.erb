@@ -1,0 +1,51 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  
+  <a class="navbar-brand" href="#">ACAB</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarColor01">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="<%= root_path %>">Accueil<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Boutique</a>
+      </li>
+      <% if user_signed_in? %>
+        <% if current_user.email == "prudhommehadrien@gmail.com" %>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Ajouter un item</a>
+          </li>
+        <% end %>
+      <% end %>
+    </ul>
+
+
+
+  <% if user_signed_in? %>
+  <div class="nav-item dropdown show">
+    <a class="nav-link dropdown-toggle " data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="true">
+      <button type="button" class="btn btn-primary">Mon Compte</button>
+      </a>
+      <div class="dropdown-menu show" x-placement="bottom-start">
+      <a class="dropdown-item" href="<%= edit_user_registration_path %>">Profil</a>
+      <a class="dropdown-item" href="#">Panier</a>
+      <a class="dropdown-item" href="<%= destroy_user_session_path %>">Deconnexion</a>
+      </div>
+  </div>
+
+  <% else %>
+  <div class="nav-item dropdown show">
+    <a class="nav-link dropdown-toggle " data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="true">
+      <button type="button" class="btn btn-secondary">Mon Compte</button>
+      </a>
+      <div class="dropdown-menu show" x-placement="bottom-start">
+      <a class="dropdown-item" href="<%= new_user_registration_path %>">Inscription</a>
+      <a class="dropdown-item" href="<%= new_user_session_path %>">Connexion</a>
+      </div>
+  </div>
+  <% end %>
+
+</nav>
