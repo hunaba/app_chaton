@@ -9,7 +9,10 @@
                 <h1 class="text-center mb-5"><%= @item.title %></h1>
                 <p><%= @item.description %></p>
                 <p>Prix: <%= @item.price %>$</p>
-                
+           <div class="text-center">
+               <a class="btn btn-secondary" <%= link_to "NEXT", item_path(one_item.id + 1)%>></a>
+           </div>              
+
 
     <%= form_tag(carts_path(params[:id]), method: "post", class: "form")  do %>
                     <div class="form-group">
