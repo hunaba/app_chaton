@@ -1,7 +1,7 @@
 class CartsController < ApplicationController
   
   def show
-    @cart = Cart.find(params[:id])
+    @cart = Cart.where(params[:id])
     @total = 0
     @cart.items.each do |item|
       @total += item.price
