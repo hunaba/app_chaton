@@ -8,8 +8,11 @@ class CartsController < ApplicationController
     end
   end
 
-  def new
-  end
+     def new
+   @cart = Cart.new
+   end 
+   #il fabrique un nv cart
+   #cart = cart.save
 
   def update
     if current_user
