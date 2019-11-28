@@ -1,5 +1,8 @@
 class CartsController < ApplicationController
 
+  #le user_id de ce cart ; mettre un current_user.cart
+
+
   def show
     @cart = Cart.where(user_id:params[:id])
     @total = 0

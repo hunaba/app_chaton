@@ -7,4 +7,6 @@ Rails.application.routes.draw do
   resources :static_pages, only: [:index]
   get '/carts/paiement', to: 'carts#paiement', as: 'paiement'
 	root to:"items#index"
+
 end
+

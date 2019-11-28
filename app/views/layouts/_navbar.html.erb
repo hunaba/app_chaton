@@ -43,11 +43,13 @@
   </div>
 
   <% else %>
+
   <div class="nav-item dropdown">
     <a class="nav-link dropdown-toggle " data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="true">
       <button type="button" class="btn btn-secondary">Mon Compte</button>
       </a>
       <div class="dropdown-menu" x-placement="bottom-start">
+
       <a class="dropdown-item" href="<%= new_user_registration_path %>">Inscription</a>
       <a class="dropdown-item" href="<%= new_user_session_path %>">Connexion</a>
       </div>
