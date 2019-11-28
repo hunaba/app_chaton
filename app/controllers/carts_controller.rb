@@ -13,6 +13,16 @@ class CartsController < ApplicationController
   end
 
   def create
+    puts params
+    @cart = Cart.new(user_id: current_user.id, item_id: params[:format])        
+    if @cart.save
+          puts "Gossip Save"
+          @items = Item.all #cart.item_id.title
+          redirect_to '/'
+        else
+          render 'items/params[id]'
+          puts "Raté"
+        end
   end
 
   def paiement
