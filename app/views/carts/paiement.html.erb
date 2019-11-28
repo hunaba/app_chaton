@@ -1,0 +1,94 @@
+
+
+<div class="container">
+
+  <div class="row">
+
+    <div class="col-md-6 offset-md-3">
+
+        <br>
+
+​<h4>Paiement</h4>
+
+    <br>
+
+    <div class="form-group">
+
+        <fieldset >
+
+          <%= image_tag('cc.png', draggable: "true", id: "fb") %>
+
+          <label class="control-label">Informations sur la carte</label>
+
+          <input class="form-control" type="text" placeholder="1234 1234 1234 1234" >
+
+        </fieldset>
+
+      </div>
+
+      
+
+      <div class="form-group">
+
+        <fieldset>
+
+          <label class="control-label">Date d'expiration</label>
+
+          <input class="form-control" type="text" placeholder="MM/AA" >
+
+        </fieldset>
+
+      </div>
+
+      
+
+      <div class="form-group">
+
+        <fieldset>
+
+        <label class="control-label" >Cryptogramme</label>
+
+        <input class="form-control" type="text" placeholder="3 chiffres au dos">
+
+        </fieldset>
+
+      </div>
+
+      <br>
+
+<h4>Adresse de facturation</h4>
+
+     <div class="form-group">
+
+        <fieldset>
+
+        <label class="control-label" ></label>
+
+        <input class="form-control" type="text" placeholder="ligne adresse 1">
+
+        <label class="control-label" ></label>
+
+        <input class="form-control" type="text" placeholder="ligne adresse 2">
+
+        <label class="control-label" ></label>
+
+        <input class="form-control" type="text" placeholder="code postal">
+
+        <label class="control-label" ></label>
+
+        <input class="form-control" type="text" placeholder="Ville">
+
+        </fieldset>
+
+      </div>
+
+          <div class="actions mt-5">
+
+    <%= f.submit "PAYER", class: "btn btn-lg btn-primary btn-block" %>
+
+    </div>
+
+</div>
+
+</div>
+
