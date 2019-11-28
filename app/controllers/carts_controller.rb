@@ -8,11 +8,24 @@ class CartsController < ApplicationController
     end
   end
 
-     def new
-   @cart = Cart.new
-   end 
+   #  def new
+  # @cart = Cart.new
+ #  end 
    #il fabrique un nv cart
    #cart = cart.save
+  def create
+    puts params
+    @cart = Cart.new(user_id: current_user.id, item_id: params[:format])
+
+        if @cart.save
+          puts "Gossip Save"
+          @items = Item.all
+          redirect_to '/'
+        else
+          render 'items/params[id]'
+          puts "Raté"
+        end
+  end
 
   def update
     if current_user
