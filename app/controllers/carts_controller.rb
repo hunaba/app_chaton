@@ -19,7 +19,7 @@ class CartsController < ApplicationController
 
         if @cart.save
           puts "Gossip Save"
-          @items = Item.all
+          @items = Item.all #cart.item_id.title
           redirect_to '/'
         else
           render 'items/params[id]'
