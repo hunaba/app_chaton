@@ -1,7 +1,12 @@
-<div id="banniere" class="d-flex align-items-center justify-content-center">
-        <h1>Panier</h1>
+    <div id="banniere" class="d-flex align-items-center justify-content-center">
+        <% if @cart.length == 0 %>
+          <h1 class="mt-5">Vous n'avez rien dans votre panier<h1>
+        <% else %>
+          <h1 class="mt-5">Panier</h1>
+        <% end %>
     </div>
-    <div class="container mt-5">
+  <% if @cart.length != 0 %>  
+    <div class="container mt-5" id="panier">
         <table class="table">
             <thead class="thead-dark">
               <tr>
@@ -15,17 +20,20 @@
             </thead>
             <tbody>
             <% @cart.each do |one_cart| %>
-              <tr>
+              <tr id="<%= one_cart.id %>">
                 <th scope="row" class="p-0 "><img src=<%= Item.find(one_cart.item_id).image_url %>  width="120" height="70"></th>
                 <td><%= Item.find(one_cart.item_id).title %></td>
                 <td><%= Item.find(one_cart.item_id).price %></td>
                 <td>1</td>
                 <td><%= Item.find(one_cart.item_id).price %></td>
-                <td class="text-center"><a>x</a></td>
+                <td class="text-center"><%= form_tag cart_path(one_cart.id), method: "delete", remote: true do %>
+                  <%= submit_tag "Supprimer", class: 'btn btn-primary'%>
+                <% end %></td>
               </tr>
             <% end %>
             </tbody>
           </table>
+          
           <div class="d-flex justify-content-between" mt-4>
             <div>
               <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Code promo">
@@ -33,9 +41,16 @@
             <div>
               <div class="border border-secondary p-4">
                 <h3>Total panier</h3>
-                <p class="mt-4">Total: <%= @total %></p>
-                <button type="button" class="btn btn-primary btn-lg btn-block mt-3">Passer commande</button>
+                <p class="mt-4" id="total">Total: <%= @total %></p>
+                <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+      		          data-key=""
+      		          data-description="Daily brunch: let&#39;s eat Dragonfruit with Granola"
+      		          data-amount= "<%= @total * 100 %>"
+                    data-locale="auto">
+                </script>
               </div>
             </div>
           </div>
+          
     </div>
+    <%end%>
