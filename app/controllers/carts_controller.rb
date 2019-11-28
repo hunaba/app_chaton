@@ -1,11 +1,12 @@
 class CartsController < ApplicationController
   
   def show
-    @cart = Cart.where(params[:id])
+    @cart = Cart.where(user_id:params[:id])
     @total = 0
-    @cart.items.each do |item|
-      @total += item.price
+    @cart.each do |one_cart|
+      @total += Item.find(one_cart.item_id).price
     end
+    @items = Item.all
   end
 
    #  def new
