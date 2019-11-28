@@ -8,6 +8,7 @@ ruby '2.5.1'
 gem 'bootstrap'
 gem 'jquery-rails'
 gem 'letter_opener'
+gem 'dotenv-rails'
 
 gem 'faker'
 gem 'table_print'
