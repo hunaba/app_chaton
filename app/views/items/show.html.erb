@@ -9,17 +9,19 @@
                 <h1 class="text-center mb-5"><%= @item.title %></h1>
                 <p><%= @item.description %></p>
                 <p>Prix: <%= @item.price %>$</p>
-                <div class="form-group">
-                    <label for="exampleSelect1">Quantité</label>
-                    <select class="form-control" id="exampleSelect1">
-                            <option>1</option>
-                            <option>2</option>
-                            <option>3</option>
-                            <option>4</option>
-                            <option>5</option>
-                    </select>
-                </div>
-                <button type="button" class="btn btn-primary btn-lg btn-block">Ajouter au panier</button>
+                
+
+    <%= form_tag(carts_path(params[:id]), method: "post", class: "form")  do %>
+                    <div class="form-group">
+                        <%= label_tag "Quantité", nil, class: "form-label" %>
+                        <%= select_tag "quantity", options_for_select(1..12, 1), class: "form-control"  %>
+                    </div>
+      
+                    <div class="text-center">
+                        <%= submit_tag("Ajouter au panier", class: "btn btn-primary btn-lg btn-block") %>
+                    </div>
+                <%end%>
+
             </div>
         </div>
       </div>
