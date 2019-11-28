@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   
-  <a class="navbar-brand" href="#">ACAB</a>
+  <a class="navbar-brand"><%= image_tag('acab.png', draggable: "true", id: "fb", size: "70x50") %></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -11,6 +11,9 @@
         <a class="nav-link" href="<%= root_path %>">Accueil<span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
+        <a class="nav-link" href="/items/1">Galerie</a>
+      </li>
+       <li class="nav-item">
         <a class="nav-link" href="<%= static_pages_path %>">A propos</a>
       </li>
       <% if user_signed_in? %>
@@ -25,11 +28,13 @@
 
 
   <% if user_signed_in? %>
-  <div class="nav-item dropdown show">
+
+  <div class="nav-item dropdown ">
+
     <a class="nav-link dropdown-toggle " data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="true">
       <button type="button" class="btn btn-primary">Mon Compte</button>
       </a>
-      <div class="dropdown-menu show" x-placement="bottom-start">
+      <div class="dropdown-menu " x-placement="bottom-start">
       <a class="dropdown-item" href="<%= edit_user_registration_path %>">Profil</a>
 
       <a class="btn btn-primary" <%= link_to("Panier", cart_path(current_user.id))%>></a>
@@ -38,11 +43,13 @@
   </div>
 
   <% else %>
-  <div class="nav-item dropdown show">
+
+  <div class="nav-item dropdown">
     <a class="nav-link dropdown-toggle " data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="true">
       <button type="button" class="btn btn-secondary">Mon Compte</button>
       </a>
-      <div class="dropdown-menu show" x-placement="bottom-start">
+      <div class="dropdown-menu" x-placement="bottom-start">
+
       <a class="dropdown-item" href="<%= new_user_registration_path %>">Inscription</a>
       <a class="dropdown-item" href="<%= new_user_session_path %>">Connexion</a>
       </div>

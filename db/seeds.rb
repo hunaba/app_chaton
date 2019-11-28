@@ -24,7 +24,7 @@ item1 = Item.create!(
 	title: "Aïe Adolf", 
 	description: Faker::Lorem.paragraph_by_chars(number: 300, supplemental: false),
 	price:  "11.99",
-	image_url: "https://www.dogalize.com/wp-content/uploads/2018/01/kitler.jpg"
+	image_url: "https://www.catsaroundtheglobe.com/wp-content/uploads/hitler_cat_5.jpg"
 	)
 
 item1 = Item.create!(
@@ -48,7 +48,7 @@ item1 = Item.create!(
 	title: "Slippiz",
 	description: Faker::Lorem.paragraph_by_chars(number: 300, supplemental: false),
 	price: "14.99",
-	image_url: "https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwjempXAko3mAhWiyIUKHTmODdsQjRx6BAgBEAQ&url=https%3A%2F%2Fwww.animatransport.net%2Fforum-sujet-1114.html&psig=AOvVaw3y4tNRyJ9drORcApxtDnG4&ust=1575038642363616"
+	image_url: "https://i.pinimg.com/originals/c0/9a/67/c09a67e800a96c97bb36e7635eeb132e.jpg"
 	)
 
 item1 = Item.create!(
@@ -56,7 +56,7 @@ item1 = Item.create!(
 	title: "The Sentinel",
 	description: Faker::Lorem.paragraph_by_chars(number: 300, supplemental: false),
 	price: "19.99",
-	image_url: "https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwjzsKvZko3mAhWRxYUKHU77D9MQjRx6BAgBEAQ&url=https%3A%2F%2Fwww.beaphar.com%2Ffr-fr%2Fconseils-veterinaires%2Fle-maine-coon&psig=AOvVaw3y4tNRyJ9drORcApxtDnG4&ust=1575038642363616"
+	image_url: "https://pbs.twimg.com/media/Cez5thaW4AI1fe2.jpg"
 	)
 
 item1 = Item.create!(
@@ -64,7 +64,7 @@ item1 = Item.create!(
 	title: "Freaky",
 	description: Faker::Lorem.paragraph_by_chars(number: 300, supplemental: false),
 	price: "9.99",
-	image_url: "https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwiC6dr4ko3mAhUGdxoKHdqtCV8QjRx6BAgBEAQ&url=http%3A%2F%2Fsarakha63-domotique.fr%2Fma-vie-aux-cotes-de-sarakha63%2Fchat-peur%2F&psig=AOvVaw3y4tNRyJ9drORcApxtDnG4&ust=1575038642363616"
+	image_url: "https://i.pinimg.com/originals/bb/59/8f/bb598f723da7419a412ae12640918550.jpg"
 	)
 
 item1 = Item.create!(
@@ -98,3 +98,21 @@ item1 = Item.create!(
 	price: "17.99",
 	image_url: "https://i.pinimg.com/originals/aa/fc/25/aafc257b0d5f95be099e00a962d6e094.jpg"
 	)
+
+item1 = Item.create!(
+
+	title: "Medieval Cat",
+	description: Faker::Lorem.paragraph_by_chars(number: 300, supplemental: false),
+	price: "1777.99",
+	image_url: "https://static.boredpanda.com/blog/wp-content/uploads/2018/03/ugly-medieval-cats-art-103-5aafaff5c7b63__700.jpg"
+	)
+
+item1 = Item.create!(
+
+	title: "Rends les points, correcteur",
+	description: Faker::Lorem.paragraph_by_chars(number: 300, supplemental: false),
+	price: "00.00",
+	image_url: "https://i.kym-cdn.com/entries/icons/original/000/026/489/crying.jpg"
+	)
+
+

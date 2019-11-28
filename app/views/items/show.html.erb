@@ -8,9 +8,10 @@
             <div class="col-5">
                 <h1 class="text-center mb-5"><%= @item.title %></h1>
                 <p><%= @item.description %></p>
-                <p>Prix: <%= @item.price %>$</p>
+                <p>Prix: <%= @item.price %>$</p>         
 
-                <%= form_tag(carts_path(params[:id]), method: "post", class: "form")  do %>
+
+    <%= form_tag(carts_path(params[:id]), method: "post", class: "form")  do %>
                     <div class="form-group">
                         <%= label_tag "Quantité", nil, class: "form-label" %>
                         <%= select_tag "quantity", options_for_select(1..12, 1), class: "form-control"  %>
