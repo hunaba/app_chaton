@@ -24,7 +24,7 @@ item1 = Item.create!(
 	title: "Aïe Adolf", 
 	description: Faker::Lorem.paragraph_by_chars(number: 300, supplemental: false),
 	price:  "11.99",
-	image_url: "https://www.dogalize.com/wp-content/uploads/2018/01/kitler.jpg"
+	image_url: "https://www.catsaroundtheglobe.com/wp-content/uploads/hitler_cat_5.jpg"
 	)
 
 item1 = Item.create!(
@@ -98,3 +98,21 @@ item1 = Item.create!(
 	price: "17.99",
 	image_url: "https://i.pinimg.com/originals/aa/fc/25/aafc257b0d5f95be099e00a962d6e094.jpg"
 	)
+
+item1 = Item.create!(
+
+	title: "Medieval Cat",
+	description: Faker::Lorem.paragraph_by_chars(number: 300, supplemental: false),
+	price: "1777.99",
+	image_url: "https://static.boredpanda.com/blog/wp-content/uploads/2018/03/ugly-medieval-cats-art-103-5aafaff5c7b63__700.jpg"
+	)
+
+item1 = Item.create!(
+
+	title: "Rends les points, correcteur",
+	description: Faker::Lorem.paragraph_by_chars(number: 300, supplemental: false),
+	price: "00.00",
+	image_url: "https://i.kym-cdn.com/entries/icons/original/000/026/489/crying.jpg"
+	)
+
+
