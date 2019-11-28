@@ -32,8 +32,8 @@
       <div class="dropdown-menu show" x-placement="bottom-start">
       <a class="dropdown-item" href="<%= edit_user_registration_path %>">Profil</a>
       <a class="dropdown-item" href="#">Panier</a>
-      <a class="dropdown-item" href="<%= destroy_user_session_path, method: :delete %>">Deconnexion</a>
-      </div>
+      <a class="dropdown-item" <%= link_to('Deconnexion', destroy_user_session_path, method: :delete) %>> </a>     
+       </div>
   </div>
 
   <% else %>
