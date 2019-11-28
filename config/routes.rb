@@ -7,5 +7,6 @@ Rails.application.routes.draw do
  resources :users do
  	resources :carts
  	get 'show', to: 'carts#show'
+
  end
 end
