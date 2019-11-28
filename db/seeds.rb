@@ -69,32 +69,32 @@ item1 = Item.create!(
 
 item1 = Item.create!(
 
-	title: "",
+	title: "FF",
 	description: Faker::Lorem.paragraph_by_chars(number: 300, supplemental: false),
 	price: "17.99",
-	image_url: ""
+	image_url: "https://addictingstories.org/wp-content/uploads/2018/02/DirtyCatHair.jpg"
 	)
 
 item1 = Item.create!(
 
-	title: "",
+	title: "Arièle",
 	description: Faker::Lorem.paragraph_by_chars(number: 300, supplemental: false),
 	price: "19.99",
-	image_url: ""
+	image_url: "https://dashingdawgs.com/wp-content/uploads/2017/09/vancouver-cat-grooming-bath.jpg"
 	)
 
 item1 = Item.create!(
 
-	title: "",
+	title: "BB",
 	description: Faker::Lorem.paragraph_by_chars(number: 300, supplemental: false),
 	price: "29.99",
-	image_url: ""
+	image_url: "https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwjVqaS2no3mAhX0AGMBHXALAn4QjRx6BAgBEAQ&url=https%3A%2F%2Fwww.pinterest.ca%2Fpin%2F119838040060517175%2F&psig=AOvVaw3y4tNRyJ9drORcApxtDnG4&ust=1575038642363616"
 	)
 
 item1 = Item.create!(
 
-	title: "",
+	title: "AA",
 	description: Faker::Lorem.paragraph_by_chars(number: 300, supplemental: false),
 	price: "14.99",
-	image_url: ""
+	image_url: "https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwifn8qqno3mAhWEA2MBHRt-CesQjRx6BAgBEAQ&url=http%3A%2F%2Farchive.francesoir.fr%2Factualite%2Ffaits-divers%2Ftop-5-des-faits-divers-insolites-218797.html&psig=AOvVaw3y4tNRyJ9drORcApxtDnG4&ust=1575038642363616"
 	)
