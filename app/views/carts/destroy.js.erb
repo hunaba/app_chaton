@@ -1,0 +1,8 @@
+alert("Item a bien été supprimé");
+document.getElementById("<%= @id %>").remove();
+if(<%=@total %> == 0){
+    document.getElementById("panier").remove();
+    document.querySelector('h1').textContent = "Vous n'avez rien dans votre panier"
+}
+
+document.getElementById("total").textContent = "<%= @total %>"

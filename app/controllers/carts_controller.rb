@@ -41,7 +41,30 @@ class CartsController < ApplicationController
   end
 
   def destroy
-    current_user.cart.item_carts.destroy_all
-    redirect_to root_path
+    puts params
+    @cart = Cart.find(params[:id])
+    @id = params[:id]
+    @item = @cart.item_id
+    @prix = Item.find(@item).price
+
+
+    @carts = Cart.where(user_id:current_user.id)
+    @total = 0
+    @carts.each do |one_cart|
+      if Item.find(one_cart.item_id).price == @prix
+        @total += 0
+      else
+        @total += Item.find(one_cart.item_id).price
+      end
+    end
+
+
+
+    @cart.delete
+    respond_to do |format|
+      format.html { redirect_to cart_path(current_user.id) }
+      format.js { }
+      flash[:notice] = "Task destroyed"
+    end
   end
 end
