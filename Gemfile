@@ -7,8 +7,10 @@ ruby '2.5.1'
 
 gem 'bootstrap'
 gem 'jquery-rails'
-gem 'letter_opener'
 
+gem 'jquery'
+
+gem 'letter_opener'
 gem 'faker'
 gem 'table_print'
 gem 'devise'
