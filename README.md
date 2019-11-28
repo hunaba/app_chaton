@@ -1,4 +1,3 @@
-# README
 
 Date : 28 novembre 2019
 Moussaillons : Gaelle Nicole, Cecile Mezon, Hadrien Prudhomme, Loan Do
@@ -20,3 +19,11 @@ Tu peux egalement acceder directement au site via heroku :
 http://acab-allcatsarebeautiful.herokuapp.com/
 
 Enjoy !
+
+## Bonjour et bienvenue sur **ACAB** ! 
+
+# All Cats Are Beautifull 
+
+
+https://i.kym-cdn.com/entries/icons/original/000/026/489/crying.jpg
+
