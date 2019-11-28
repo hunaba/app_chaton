@@ -32,7 +32,7 @@
       <div class="dropdown-menu show" x-placement="bottom-start">
       <a class="dropdown-item" href="<%= edit_user_registration_path %>">Profil</a>
 
-      <a class="btn btn-primary" <%= link_to "Panier", cart_path(current_user.id)%></a>
+      <a class="btn btn-primary" <%= link_to("Panier", cart_path(current_user.id))%>></a>
       <a class="dropdown-item" <%= link_to('Deconnexion', destroy_user_session_path, method: :delete) %>> </a>     
        </div>
   </div>
