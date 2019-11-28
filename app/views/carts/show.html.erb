@@ -1,0 +1,45 @@
+<div id="banniere" class="d-flex align-items-center justify-content-center">
+        <h1>Panier</h1>
+    </div>
+    <div class="container mt-5">
+        <table class="table">
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col"></th>
+                <th scope="col">Produit</th>
+                <th scope="col">Prix</th>
+                <th scope="col">Quantité</th>
+                <th scope="col">Total</th>
+                <th scope="col" class="text-center">Supprimer</th>
+              </tr>
+            </thead>
+            <tbody>
+            <% @cart.each do |one_cart| %>
+              <tr>
+                <th scope="row" class="p-0 "><img src=<%= Item.find(one_cart.item_id).image_url %>  width="120" height="70"></th>
+                <td><%= Item.find(one_cart.item_id).title %></td>
+                <td><%= Item.find(one_cart.item_id).price %></td>
+                <td>1</td>
+                <td><%= Item.find(one_cart.item_id).price %></td>
+                <td class="text-center"><a>x</a></td>
+              </tr>
+            <% end %>
+            </tbody>
+          </table>
+          <div class="d-flex justify-content-between" mt-4>
+            <div>
+              <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Code promo">
+            </div>
+            <div>
+              <div class="border border-secondary p-4">
+                <h3>Total panier</h3>
+
+                <p class="mt-4">Total: 500E</p>
+
+                <a class="btn btn-primary btn-lg btn-block mt-3" <%= render 'paiement' %> ></a>
+
+
+              </div>
+            </div>
+          </div>
+    </div>

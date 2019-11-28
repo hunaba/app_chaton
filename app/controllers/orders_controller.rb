@@ -1,12 +1,21 @@
 class OrdersController < ApplicationController
   before_action :authenticate_user!
   
+  def add_item_to_order
+    ord = Order.new
+    ord.user = current_user
+    ord.save
+  end
+
   def index
     @orders = current_user.orders
   end
 
   def show
+
+    #########
   end
+  
 
   def create
     unless current_user.cart.items.length === 0
@@ -45,7 +54,7 @@ class OrdersController < ApplicationController
   def update_total
     self.total_price = calculate_total
   end
-end
+
 
   def destroy
   end

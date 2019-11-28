@@ -1,14 +1,21 @@
 class CartsController < ApplicationController
+
   #le user_id de ce cart ; mettre un current_user.cart
+
+
   def show
-    @cart = Cart.find(params[:id])
+    @cart = Cart.where(user_id:params[:id])
     @total = 0
-    @cart.items.each do |item|
-      @total += item.price
+    @cart.each do |one_cart|
+      @total += Item.find(one_cart.item_id).price
     end
+    @items = Item.all
   end
 
   def create
+  end
+
+  def paiement
   end
 
   def update
