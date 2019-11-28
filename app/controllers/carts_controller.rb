@@ -8,6 +8,17 @@ class CartsController < ApplicationController
   end
 
   def create
+    @id = params[:id]
+    @cart = Cart.new(user_id: current_user.id, item_id: params[:id])
+
+        if @cart.save
+          puts "Gossip Save"
+          @items = Item.all
+          redirect_to '/'
+        else
+          render 'items/params[id]'
+          puts "Raté"
+        end
   end
 
   def update
