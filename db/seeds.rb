@@ -42,3 +42,59 @@ item1 = Item.create!(
 	price: "24.99",
 	image_url: "https://images.squarespace-cdn.com/content/v1/51ebd7afe4b0a4a7472c13fa/1484937410122-RACQZMX5RWT5XTBAFHJ5/ke17ZwdGBToddI8pDm48kEmsZfcSq4CpG4yHuA0C0LB7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z5QHyNOqBUUEtDDsRWrJLTmoJKo7K7P-K3iDKcb1IjyB3fHK8MAAd2WNxDJc2y_6qIzJDiuAyZwl1Z_c68w-NbR/image-asset.jpeg"
 	)
+
+item1 = Item.create!(
+
+	title: "Slippiz",
+	description: Faker::Lorem.paragraph_by_chars(number: 300, supplemental: false),
+	price: "14.99",
+	image_url: "https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwjempXAko3mAhWiyIUKHTmODdsQjRx6BAgBEAQ&url=https%3A%2F%2Fwww.animatransport.net%2Fforum-sujet-1114.html&psig=AOvVaw3y4tNRyJ9drORcApxtDnG4&ust=1575038642363616"
+	)
+
+item1 = Item.create!(
+
+	title: "The Sentinel",
+	description: Faker::Lorem.paragraph_by_chars(number: 300, supplemental: false),
+	price: "19.99",
+	image_url: "https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwjzsKvZko3mAhWRxYUKHU77D9MQjRx6BAgBEAQ&url=https%3A%2F%2Fwww.beaphar.com%2Ffr-fr%2Fconseils-veterinaires%2Fle-maine-coon&psig=AOvVaw3y4tNRyJ9drORcApxtDnG4&ust=1575038642363616"
+	)
+
+item1 = Item.create!(
+
+	title: "Freaky",
+	description: Faker::Lorem.paragraph_by_chars(number: 300, supplemental: false),
+	price: "9.99",
+	image_url: "https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwiC6dr4ko3mAhUGdxoKHdqtCV8QjRx6BAgBEAQ&url=http%3A%2F%2Fsarakha63-domotique.fr%2Fma-vie-aux-cotes-de-sarakha63%2Fchat-peur%2F&psig=AOvVaw3y4tNRyJ9drORcApxtDnG4&ust=1575038642363616"
+	)
+
+item1 = Item.create!(
+
+	title: "Fourasse",
+	description: Faker::Lorem.paragraph_by_chars(number: 300, supplemental: false),
+	price: "17.99",
+	image_url: "https://addictingstories.org/wp-content/uploads/2018/02/DirtyCatHair.jpg"
+	)
+
+item1 = Item.create!(
+
+	title: "Arièle",
+	description: Faker::Lorem.paragraph_by_chars(number: 300, supplemental: false),
+	price: "19.99",
+	image_url: "https://dashingdawgs.com/wp-content/uploads/2017/09/vancouver-cat-grooming-bath.jpg"
+	)
+
+item1 = Item.create!(
+
+	title: "J-P.",
+	description: Faker::Lorem.paragraph_by_chars(number: 300, supplemental: false),
+	price: "29.99",
+	image_url: "https://i.pinimg.com/originals/79/53/01/795301e3963183c6d797cdef358ac3dc.jpg"
+	)
+
+item1 = Item.create!(
+
+	title: "Jokert",
+	description: Faker::Lorem.paragraph_by_chars(number: 300, supplemental: false),
+	price: "17.99",
+	image_url: "https://i.pinimg.com/originals/aa/fc/25/aafc257b0d5f95be099e00a962d6e094.jpg"
+	)

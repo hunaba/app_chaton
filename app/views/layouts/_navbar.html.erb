@@ -14,7 +14,7 @@
         <a class="nav-link" href="/items/index">Galerie</a>
       </li>
        <li class="nav-item">
-        <a class="nav-link" href="#">A Propos</a>
+        <a class="nav-link" href="<%= static_pages_path %>">A propos</a>
       </li>
       <% if user_signed_in? %>
         <% if current_user.email == "prudhommehadrien@gmail.com" %>
@@ -34,9 +34,10 @@
       </a>
       <div class="dropdown-menu show" x-placement="bottom-start">
       <a class="dropdown-item" href="<%= edit_user_registration_path %>">Profil</a>
-      <a class="dropdown-item" href="#">Panier</a>
-      <a class="dropdown-item" href="<%= destroy_user_session_path %>">Deconnexion</a>
-      </div>
+
+      <a class="btn btn-primary" <%= link_to("Panier", cart_path(current_user.id))%>></a>
+      <a class="dropdown-item" <%= link_to('Deconnexion', destroy_user_session_path, method: :delete) %>> </a>     
+       </div>
   </div>
 
   <% else %>
