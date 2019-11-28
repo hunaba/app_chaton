@@ -16,11 +16,11 @@
             <tbody>
             <% @cart.each do |one_cart| %>
               <tr>
-                <th scope="row" class="p-0 "><img src="images/banniere_chat.jpg" width="120" height="70"></th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-                <td>@mdo</td>
+                <th scope="row" class="p-0 "><img src=<%= Item.find(one_cart.item_id).image_url %>  width="120" height="70"></th>
+                <td><%= Item.find(one_cart.item_id).title %></td>
+                <td><%= Item.find(one_cart.item_id).price %></td>
+                <td>1</td>
+                <td><%= Item.find(one_cart.item_id).price %></td>
                 <td class="text-center"><a>x</a></td>
               </tr>
             <% end %>
@@ -33,8 +33,12 @@
             <div>
               <div class="border border-secondary p-4">
                 <h3>Total panier</h3>
+
                 <p class="mt-4">Total: 500E</p>
+
                 <a class="btn btn-primary btn-lg btn-block mt-3" <%= render 'paiement' %> ></a>
+
+
               </div>
             </div>
           </div>
