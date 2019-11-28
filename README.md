@@ -1,28 +1,22 @@
 # README
-coucou
-re coucou
-re re coucou
 
+Date : 28 novembre 2019
+Moussaillons : Gaelle Nicole, Cecile Mezon, Hadrien Prudhomme, Loan Do
+Projet : ACAB, All Cats Are Beautiful
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Pour commencer, telecharge ou clone le repo.
+Ensuite, dans ton terminal :
 
-Things you may want to cover:
+$ bundle install
+$ rails db:create
+$ rails db:migrate
+$ rails db:seed
+$ rails s
 
-* Ruby version
+Tu pourras acceder en local au site en allant sur :
+http://localhost:3000/
 
-* System dependencies
+Tu peux egalement acceder directement au site via heroku :
+http://acab-allcatsarebeautiful.herokuapp.com/
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Enjoy !
