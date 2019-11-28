@@ -9,8 +9,8 @@ class CartsController < ApplicationController
   end
 
   def create
-    @id = params[:id]
-    @cart = Cart.new(user_id: current_user.id, item_id: params[:id])
+    puts params
+    @cart = Cart.new(user_id: current_user.id, item_id: params[:format])
 
         if @cart.save
           puts "Gossip Save"
